@@ -11,13 +11,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MediturnModel {
+public class Mediturn {
 
     @NotNull (message = "Debe ingresar el rut del paciente")
     private Long rutPaciente;
-
-    @NotBlank (message = "Los apellidos del paciente no pueden estar en blanco")
-    private String apellidosPaciente;
 
     @NotBlank (message = "El nombre del paciente no puede estar en blanco")
     private String nombrePaciente;
