@@ -25,8 +25,7 @@ public class Mediturn {
     @NotBlank (message = "Los apellidos del paciente no pueden estar en blanco")
     private String apellidosPaciente;
 
-    @NotNull (message = "La edad del paciente no puede ser nula")
-    private int edadPaciente;
+    private Date fNacimientoPac;
 
     @NotBlank (message = "El tipo de atención/especialidad requerida no puede estar en blanco")
     private String tipoEspecialidad;
