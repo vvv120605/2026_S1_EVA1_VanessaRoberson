@@ -13,8 +13,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Mediturn {
 
-    @NotNull (message = "Debe ingresar el rut del paciente")
+    @NotNull (message = "Debe ingresar el rut del paciente sin dígito verificador")
     private Long rutPaciente;
+
+    @NotBlank (message = "El dígito verificador no puede estar en blanco")
+    private String digitoVerificador;
 
     @NotBlank (message = "El nombre del paciente no puede estar en blanco")
     private String nombrePaciente;
