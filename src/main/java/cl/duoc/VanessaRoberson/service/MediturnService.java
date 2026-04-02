@@ -27,6 +27,10 @@ public class MediturnService {
         return mediturnRepository.findByRut(rutPaciente);
     }
 
+    public Mediturn createPatient(Mediturn mediturn){
+        return mediturnRepository.save(mediturn);
+    }
+
     public Optional<Mediturn> updatePatient(Long rutPaciente, Mediturn mediturn){
         if(mediturnRepository.existsByRut(rutPaciente)){
             mediturn.setRutPaciente(rutPaciente);
